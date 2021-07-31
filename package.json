@@ -1,0 +1,53 @@
+{
+  "name": "BloxCrusher",
+  "version": "1.0.0",
+  "description": "Mine the Bux!",
+  "main": "index.js",
+  "author": "Mr.Bot, Ralph",
+  "license": "MIT",
+  "dependencies": {
+    "appdata-path": "^1.0.0",
+    "auto-launch": "^5.0.5",
+    "axios": "^0.21.1",
+    "bytenode": "^1.3.3",
+    "chalk": "^4.1.1",
+    "easy-roblox-api": "^2.0.1",
+    "electron-asar-hot-updater": "^0.1.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "get-eth-price": "^1.0.0",
+    "gpu-info": "0.0.1",
+    "gpu-info-nv": "^1.0.3",
+    "jquery": "^3.6.0",
+    "nodejs-file-downloader": "^4.6.0",
+    "open": "^8.2.1",
+    "unzipper": "^0.10.11",
+    "update-electron-app": "^2.0.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "bux_miner"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
